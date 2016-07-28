@@ -9,7 +9,7 @@
   "author": "Alexey Yaroshevich <zxqfox@gmail.com>",
   "license": "MPL-2.0",
   "dependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "gulpjs/gulp#4.0",
     "gulp-bem-bundle-builder": "0.0.1",
     "gulp-bem-xjst": "^1.1.0",
     "gulp-concat": "^2.6.0",
