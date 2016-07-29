@@ -55,26 +55,18 @@ gulp.task('common', function() {
                     // }))
                     .pipe(concat(bundle.name + '.css')),
 
-            'bemhtml.js': bundle =>
-                bundle.src('bemhtml.js')
-                    .pipe(concat('server.bemhtml.js'))
-                    .pipe(bemhtml()),
-
             'html': bundle => {
-                var bemhtmlStream = bundle.src('bemhtml.js')
+                var bemhtmlStream = bundle.src('bemhtml')
                     .pipe(concat('server.bemhtml.js'))
-                    .pipe(bemhtml())
-                    .pipe(debug());
+                    .pipe(bemhtml());
 
                 return gulp.src('bundles/*/*.bemjson.js')
-                    .pipe(debug())
-                    .pipe(toHtml(bemhtmlStream))
-                    .on('error', console.error);
+                    .pipe(toHtml(bemhtmlStream));
             }
         }))
         .on('error', console.error)
         .pipe(debug())
         .pipe(gulp.dest('./bundles/common'))
-                    .on('error', console.error);;
+        .on('error', console.error);
 });
 

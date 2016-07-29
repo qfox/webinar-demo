@@ -10,8 +10,8 @@
   "license": "MPL-2.0",
   "dependencies": {
     "gulp": "gulpjs/gulp#4.0",
-    "gulp-bem-bundle-builder": "0.0.1",
-    "gulp-bem-xjst": "^1.1.0",
+    "gulp-bem-bundle-builder": "0.0.3",
+    "gulp-bem-xjst": "^1.1.1",
     "gulp-concat": "^2.6.0",
     "gulp-debug": "^2.1.2",
     "through2-filter": "^2.0.0"
